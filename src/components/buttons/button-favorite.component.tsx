@@ -21,9 +21,9 @@ const FavoriteButton: FC<{ character: Character }> = ({ character }) => {
   const favoriteMap = useSelector((state) => state.favorites.favoritesMapa);
   const dispatch = useDispatch();
 
-  const src = favoriteMap.has(character.id)
-    ? "/imagenes/star-filled.png"
-    : "/imagenes/star.png";
+  const src = require(favoriteMap.has(character.id)
+    ? "../../Assets/star-filled.png"
+    : "../../Assets/star.png");
 
   /**
    * Function that updates the Favorites status, adding or removing the character
